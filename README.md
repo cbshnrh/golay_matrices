@@ -6,4 +6,4 @@
   - Output: 
   [A, B], two genarated golay matrices, the sum of whose auto-correlation functions is a 2-D delta-function, which is illustrated in a figure:
   
-  ![14_17](./14_17.png)
+  ![example](./14_17.png)
