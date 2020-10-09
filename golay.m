@@ -1,3 +1,5 @@
+% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
+% Department of Communication Science and Engineering, Fudan University, Shanghai, China
 function seq = golay(len, type)
 e2 = [1, 1; 1, -1];
 e10 =[1 -1 -1 1 -1 1 -1 -1 -1 1;
