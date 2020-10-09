@@ -1,3 +1,5 @@
+% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
+% Department of Communication Science and Engineering, Fudan University, Shanghai, China
 function expo = len_dec(num, type)
 init = num;
 switch type
@@ -28,10 +30,10 @@ else
             end
         end
         if ~isempty(uSet)
-            % Ëæ»úÑ¡È¡Ò»¸öu
+            % éšæœºé€‰å–ä¸€ä¸ªu
             uRand = uSet(randperm(length(uSet)));
             u = uRand(1);
-            % uÖĞËæ»úÑ¡Ò»¸ö·ûºÏÌõ¼şµÄucºÍue, ±íÊ¾10ºÍ26µÄ¸öÊı
+            % uä¸­éšæœºé€‰ä¸€ä¸ªç¬¦åˆæ¡ä»¶çš„ucå’Œue, è¡¨ç¤º10å’Œ26çš„ä¸ªæ•°
             uc = randi([max(u-e, 0), min(u, c)]);
             ue = u - uc;
             a = a-u;
