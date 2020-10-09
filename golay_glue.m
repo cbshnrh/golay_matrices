@@ -1,5 +1,10 @@
-% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
-% Department of Communication Science and Engineering, Fudan University, Shanghai, China
+% to combine 2 pairs of complex golay sequences by a pair of binary golay sequences
+% input: x and y are binary golay sequences of length g
+%        a and b are complex golay sequences of length g1
+%        c and d are complex golay sequences of length g2
+% output: pair is the genarated golay sequences of length g*g1*g2
+% Last modified on Oct. 8, 2020
+% Copyright Communication System Research Laboratory, Fudan University
 function pair = golay_glue(x, y, a, b, c, d)
 u = 1/4 * (x+flip(x)+y-flip(y));
 v = 1/4 * (x-flip(x)+y+flip(y));
