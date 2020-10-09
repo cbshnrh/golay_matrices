@@ -1,3 +1,5 @@
+% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
+% Department of Communication Science and Engineering, Fudan University, Shanghai, China
 function pair = golay_glue(x, y, a, b, c, d)
 u = 1/4 * (x+flip(x)+y-flip(y));
 v = 1/4 * (x-flip(x)+y+flip(y));
