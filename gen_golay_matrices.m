@@ -23,4 +23,7 @@ c = pair2(1, :).';
 d = pair2(2, :).';
 A = cat(dim, a*c.', b*d.');
 B = cat(dim, -a*flip(d'), b*flip(c'));
+close all;
+figure;
+stem3(abs(xcorr2(A) + xcorr2(B)));
 end
