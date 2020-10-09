@@ -1,5 +1,9 @@
-% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
-% Department of Communication Science and Engineering, Fudan University, Shanghai, China
+% to generate Golay matrices of M rows and L columns.
+% input: M is the number of the rows
+%        L is the number of the columns
+% output: A and B are Golay complementary matrices
+% Last modified on Oct. 8, 2020
+% Copyright Communication System Research Laboratory, Fudan University
 function [A, B] = gen_golay_matrices(M, L)
 assert(mod(M, 2)==0 || mod(L, 2)==0, 'Infeasible length!');
 if mod(M, 2) == 0
