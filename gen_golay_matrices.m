@@ -1,3 +1,5 @@
+% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
+% Department of Communication Science and Engineering, Fudan University, Shanghai, China
 function [A, B] = gen_golay_matrices(M, L)
 assert(mod(M, 2)==0 || mod(L, 2)==0, 'Infeasible length!');
 if mod(M, 2) == 0
