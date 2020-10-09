@@ -1,5 +1,8 @@
-% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
-% Department of Communication Science and Engineering, Fudan University, Shanghai, China
+% to genarate golay complementary sequences of given length
+% input: len is the length of required sequences
+% output: seq is 2×len matrices, whose row vectors are golay sequences
+% Last modified on Oct. 8, 2020
+% Copyright Communication System Research Laboratory, Fudan University
 function seq = gen_golay_sequences(len)
 try
     seq = golay(len, 'binary');
