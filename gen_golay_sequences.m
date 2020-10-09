@@ -1,3 +1,5 @@
+% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
+% Department of Communication Science and Engineering, Fudan University, Shanghai, China
 function seq = gen_golay_sequences(len)
 try
     seq = golay(len, 'binary');
