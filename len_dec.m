@@ -1,5 +1,10 @@
-% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
-% Department of Communication Science and Engineering, Fudan University, Shanghai, China
+% to decompose a number into exponentials of some bases
+% input: num is the number to be decomposed
+%        type is a required type of golay sequences
+% output: expo is a row vector whose elements are exponentials of some bases
+% Last modified on Oct. 8, 2020
+% Copyright Communication System Research Laboratory, Fudan University
+
 function expo = len_dec(num, type)
 init = num;
 switch type
@@ -30,10 +35,10 @@ else
             end
         end
         if ~isempty(uSet)
-            % 随机选取一个u
+            % to choose a feasible u randormly
             uRand = uSet(randperm(length(uSet)));
             u = uRand(1);
-            % u中随机选一个符合条件的uc和ue, 表示10和26的个数
+            % to decompose u into uc and ue, the exponential of 10 and 26 respectively
             uc = randi([max(u-e, 0), min(u, c)]);
             ue = u - uc;
             a = a-u;
