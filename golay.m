@@ -1,5 +1,10 @@
-% Copyright (c) 2020 Key Laboratory for Information Science of Electromagnetic Waves (MoE),
-% Department of Communication Science and Engineering, Fudan University, Shanghai, China
+% to generate Golay sequences of given length and type
+% input: len is the required length
+%        type is the required type，‘binary' or 'quaternary'
+% output:seq is a 2xlen matrix, whose row vectors are golay sequences
+% Last modified on Oct. 8, 2020
+% Copyright Communication System Research Laboratory, Fudan University
+
 function seq = golay(len, type)
 e2 = [1, 1; 1, -1];
 e10 =[1 -1 -1 1 -1 1 -1 -1 -1 1;
