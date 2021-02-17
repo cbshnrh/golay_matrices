@@ -34,15 +34,16 @@ for nn = 1:1e6
             s = s/2;
         end
         xk = ys;
-        if max(abs(f))/M<psl % the Jacobi matrix will be nearly singular when get close to a solution
-            fprintf('M= %d, Try # %d Norm = %f\n ',M,nn,normNew);
+        currPsl = max(abs(f))/(2*M);
+        if currPsl<psl % the Jacobi matrix will be nearly singular when get close to a solution
+            fprintf('M= %d, Try # %4d, Terminate after %3d Iterations, PSL = %E\n',M,nn,iterCnt, currPsl);
             W = exp(1j*reshape(ys,M,2));
             fprintf('M= %d, Done after %d iterations!\n',M,iterCnt);
             % sv = svd(Jacobi);
             % sv(2*(M-1)-1)
             a = W(:,1);
             b = W(:,2);
-            figure,semilogy(abs(xcorr(a)+xcorr(b))/(2*M));
+            figure,semilogy(-M+1:M-1,abs(xcorr(a)+xcorr(b))/(2*M));
             return
         end
         if abs(normNew-normOld) < 1e-4*normOld
@@ -55,7 +56,7 @@ for nn = 1:1e6
         iterCnt = iterCnt+1;
     end
     %if mod(nn,10)==1
-    fprintf('M= %d, Try # %4d, Terminate after %3d Iterations, Norm = %f\n',M,nn,iterCnt, normNew);
+    fprintf('M= %d, Try # %4d, Terminate after %3d Iterations, PSL = %E\n',M,nn,iterCnt, currPsl);
     %end
 end
 end
